@@ -27,6 +27,7 @@ import java.util.logging.Logger;
  */
 public class FunctionApp {
   protected static final Logger logger = Logger.getLogger("basic");
+
   public static JsonObject main(JsonObject args) {
 
     JsonObject response = new JsonObject();
@@ -35,7 +36,7 @@ public class FunctionApp {
     if (nameArg == null) {
       result = "Hello! Welcome to OpenWhisk";
     } else {
-      result = "Hello " + nameArg.getAsString() + " Welcome to OpenWhisk";
+      result = "Hello " + nameArg.getAsString() + "! Welcome to JavaSIG Serverless Mini Workshop";
     }
     response.addProperty("greetings", result);
 
